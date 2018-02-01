@@ -1,0 +1,16 @@
+
+<table>
+  <tbody *ngFor="let u of users">
+  <tr>
+    <td>{{u.user_id}}</td>
+    <td>{{u.user_surname}}</td>
+    <td>{{u.user_name}}</td>
+    <td>{{u.user_email}}</td>
+    <td>{{u.user_phone}}</td>
+  </tr>
+  </tbody>
+</table>
+<input type="text" [(ngModel)]="Username">
+<input type="text" [(ngModel)]="Usersurname">
+<input type="text" [(ngModel)]="Useremail">
+<button (click)="postUser()">click</button>

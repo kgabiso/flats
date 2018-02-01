@@ -1,0 +1,228 @@
+.article {
+
+  border-right: 1px solid #f4f4f1;
+  border-bottom: 1px solid #f4f4f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.article > h1 > h2 > h3 >h4{
+  color: #616161;
+}
+.col-md-4 > img{
+
+}
+.comment {
+  height:60px;
+  line-height:20px; /* Height / no. of lines to display */
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+.date{
+  /*position: static;*/
+  bottom: 0;
+  right: 18px;
+
+}
+.blob >.like{
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+}
+
+ .fav{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 30px;
+  color: #F44336;
+}
+.fav{
+  color: #F44336;
+}
+.rate-block > p{
+  margin: 18px;
+}
+
+.btn-detail{
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #2196F3;
+  margin-bottom: 5px;
+}
+.sidebar {
+  width: 30%;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  padding: 0px;
+  background: #ffffff;
+  min-height: 1000px;
+  border-right: 1px solid #f4f4f1;
+  border-bottom: 1px solid #f4f4f1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sidebar-content{
+  padding: 10px;
+}
+.skills-rate{
+  height: 25px;
+  width: 100%;
+  background-color:#BBDEFB;
+  border-radius: 18px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.skills-rate > div{
+  height: 100%;
+  width: 50%;
+  background-color: #2196F3;
+  border-radius: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+.lang-rate{
+  height: 25px;
+  width: 100%;
+  background-color:#E0E0E0;
+  border-radius: 15px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.lang-rate > div{
+  height: 100%;
+  width: 20%;
+  border-radius: 15px;
+}
+
+i{
+  color: #5bc0de;
+  padding-right: 8px;
+}
+.fab{
+  background-color:#F44336;
+  width:60px;
+  height:60px;
+  border-radius:100%;
+  background:#F44336;
+  border:none;
+  outline:none;
+  color:#FFF;
+  font-size:36px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+}
+.fab:focus {
+  transform:scale(1.1);
+  transform:rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+
+}
+.marg-left{
+  margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
+/*seach bar*/
+.search {
+  width: 100%;
+  position: relative;
+
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: row; /* Safari 6.1+ */
+  display: flex;
+  flex-direction: row;
+
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #BBDEFB;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+
+}
+
+.searchTerm:focus{
+  border-color: #2196F3;
+  font-weight: bold;
+}
+
+.searchButton {
+  background-color: #2196F3;
+  border: 0px;
+
+}
+.searchButton > i{
+  color: #FFFFFF;
+}
+/*Range slider*/
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #5bc0de;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.loading{
+  text-align: center;
+  width: 10%;
+  height: 10%;
+  margin-left: 50%;
+
+}
+.pagination > li > a{
+  cursor: hand;
+}
+.loader {
+  border: 16px solid whitesmoke; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-bottom: 16px solid  #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 0.5s linear infinite;
+  margin-left:50% ;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

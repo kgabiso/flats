@@ -1,0 +1,242 @@
+<!--<div class="container-fluid">-->
+  <!--<div class="row content">-->
+    <!--<div class="col-sm-2 sidebar" style="background: white;height: 100%">-->
+      <!--<img src="https://www.justlifelogo.com/wp-content/uploads/2016/09/city-nest-property-logo-for-sale.jpg" style="object-fit: fill;width: 100%;height: 200px;" />-->
+      <!--<div class="sidebar-content" >-->
+
+        <!--<div class="search">-->
+          <!--<input type="text" class="searchTerm" [(ngModel)]="searchString" placeholder="Where are you looking ?">-->
+          <!--<button class="searchButton">-->
+            <!--<i class="glyphicon glyphicon-search"></i>-->
+          <!--</button>-->
+        <!--</div>-->
+        <!--<div style="border-bottom: 1px #E0E0E0 solid "></div>-->
+
+        <!--<div style="margin-top: 18px">-->
+          <!--<div style="float: left">R1000</div>-->
+          <!--<div style="float: right">R10 000</div>-->
+          <!--<input type="range" min="1000" max="10000" value="50" class="slider" id="myRange" [(ngModel)]="rangePrice" (change)="filterPrice()" value="1000">-->
+          <!--<p>R{{rangePrice}} max price to spend</p>-->
+        <!--</div>-->
+        <!--<button class="btn-primary" (click)="searchFlat()" style="width: 100%;border: 0;font-size: 1.5em;"> search flat</button>-->
+
+        <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="form-group">&#45;&#45;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="btn-detail" (click)="search_flat()">Search...</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p><i class="glyphicon glyphicon-briefcase"></i>Designer</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p><i class="glyphicon glyphicon-home"></i>eMbalenhle Mpumalanga</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p><i class="glyphicon glyphicon-envelope"></i>Kgabisorampheri@gmail.com</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p><i class="glyphicon glyphicon-earphone"></i>084 258 7727</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div style="border-bottom: 1px #E0E0E0 solid "></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h3><i class="glyphicon glyphicon-asterisk"></i>Skills</h3>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">C++</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="skills-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div>&ndash;&gt;-->
+            <!--&lt;!&ndash;50%&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">JAVA</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="skills-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div>&ndash;&gt;-->
+            <!--&lt;!&ndash;50%&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">Angular</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="skills-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div>&ndash;&gt;-->
+            <!--&lt;!&ndash;50%&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">Ruby</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="skills-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div>&ndash;&gt;-->
+            <!--&lt;!&ndash;50%&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div style="border-bottom: 1px #E0E0E0 solid; margin-top:18px "></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h3><i class="glyphicon glyphicon-globe"></i>Language</h3>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">Sepedi</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="lang-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div style=" background-color: #4CAF50;width: 80%;">good</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">English</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="lang-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div style="background-color: #FF9800;width: 50%;">Average</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p style="margin: 0;">Afrikaans</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="lang-rate">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div style="background-color: #FF3D00;width: 20%;">Bad</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--<img class="loading" src="../../assets/img/image_1173712.gif" *ngIf="!flats" >-->
+    <!--<div class="col-sm-8" *ngFor="let f of flats">-->
+
+      <!--<div class="article" style="width: 100%;">-->
+          <!--<img class="" src="{{f.flat_img}}"-->
+               <!--style="height: 250px;width: 250px;">-->
+        <!--<div class="blob" style=" position: relative;padding: 0 18px 0 18px;height: 250px;width: 100%;">-->
+            <!--<h1>{{f.flat_name}}</h1>-->
+            <!--<p class="fav"><i class="glyphicon glyphicon-heart"></i></p>-->
+            <!--<p><i class="glyphicon glyphicon-map-marker"></i>{{f.flat_location}}</p>-->
+            <!--<p><i class="glyphicon glyphicon-piggy-bank"></i>R{{f.flat_price}}</p>-->
+          <!--<div style="border-bottom: 1px #E0E0E0 solid "></div>-->
+            <!--<p class="comment">{{f.flat_description}}</p>-->
+          <!--<p class="date"><i class="glyphicon glyphicon-calendar"></i>{{f.flat_date_post}}</p>-->
+        <!--</div>-->
+        <!--<div class="rate-block" style="height: 250px;width: 40%;position: relative;">-->
+          <!--<p>rating ****</p>-->
+          <!--<p style="color: #2196F3;font-size: medium;font-weight: bold;"><img style="height: 30px;width: 40px;margin-right: 10px" src="../assets/img/bed.png">{{f.flat_bedroom}}</p>-->
+          <!--<p style="color: #2196F3;font-size: medium;font-weight: bold;"><img style="height: 30px;width: 40px;margin-right: 10px"src="../assets/img/bath.png">{{f.flat_bathroom}}</p>-->
+          <!--<p style="color: #2196F3;font-size: medium;font-weight: bold;"><img style="height: 30px;width: 40px;margin-right: 10px" src="../assets/img/parking.png">{{f.flat_parking}}</p>-->
+          <!--<button class="btn-detail btn-primary" (click)="showDetails(f.flat_id)" style="width: 100%;border: 0;margin-right: 6px">View Details</button>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;<div class="loading" *ngIf="!flats" style="">&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<p>Loading...</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--<div *ngIf="flats && flats.length == 0" style=" font-size: x-large;color: #2196F3;text-align: center;margin-top: 15%;margin-left: 15%">-->
+     <!--<img src="../../assets/img/search-problem.png" style="padding-right: 18px;">No flats found-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<button class="fab" routerLink="login" (click)="go()"><i class="glyphicon glyphicon-log-in" style="color: white;font-size: x-large;"></i></button>-->
+<!--</div>-->
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+
+      <div class=" panel panel-default" style="margin-top: 18px; min-height: 800px">
+        <div class="panel-body">
+
+          <div class="alert alert-info" *ngIf="radio_val" [@fadeInOut] >
+            <strong>Info!</strong> {{infoMess}}
+          </div>
+          <hr>
+          <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="searchString" placeholder="Where are you looking ?">
+            <span class="input-group-btn">
+          <div class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </div>
+        </span>
+          </div>
+
+          <div style="margin-top: 18px">
+          <div style="float: left">R1000</div>
+          <div style="float: right">R10 000</div>
+          <input type="range" min="1000" max="10000" value="50" class="slider" id="myRange" [(ngModel)]="rangePrice" value="1000">
+          <p>R{{rangePrice}} max price to spend</p>
+          </div>
+
+          <form class="form-horizontal" style="margin: 5px 18px 0 18px" *ngIf="radio_val" [@fadeInOut] #searchForm="ngForm">
+            <div class="form-group">
+                <input class="form-control" type="number" [(ngModel)]="bedrooms" name="flatbedroom"  placeholder="bedroom'(s)" required   #name="ngModel">
+            </div>
+            <div [hidden]="name.valid || name.pristine"
+                 class="alert alert-danger">
+              Name is required
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" [(ngModel)]="bathrooms" placeholder="bathroom'(s)" name="flatbathroom" required>
+            </div>
+
+            <div class="form-group">
+                <select class="form-control" name="flatParking" [(ngModel)]="parking">
+                  <option>No</option>
+                  <option>Yes</option>
+                </select>
+            </div>
+            <button class="btn btn-info btn-block pull-left" [disabled]="!searchForm.form.valid" >Search</button>
+
+          </form>
+          <div class="container-fluid" style="position: absolute; bottom: 5%; width: 80%">
+          <div class="row content" >
+                <button class="btn btn-info btn-block pull-left" (click)="searchFlat()" >Search</button>
+                <button class="btn btn-default btn-block pull-right" (click)="searchReset()">Reset</button>
+          </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+
+      <div class=" panel panel-default" style="margin-top: 18px;">
+        <div class="panel-heading">
+          <h4><i class="glyphicon glyphicon-search"></i>Filter</h4>
+        </div>
+        <div class="panel-body">
+          <form>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" [value]='0' [(ngModel)]="radio_val" (change)='onRadioChange(0)'>Simple search
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" [value]='1' [(ngModel)]="radio_val" (change)='onRadioChange(1)'>Advanced search
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="alert alert-info"  *ngIf="numberResult">
+        <strong>Found : </strong> {{numberResult}}
+      </div>
+      <div *ngIf="flats && flats.length == 0" [@fadeInOut] style=" font-size: x-large;color: #2196F3;text-align: center;margin-top: 18px;" class="alert alert-danger">
+        <img src="../../assets/img/search-problem.png" style="padding-right: 18px;">No flats found
+      </div>
+      <!--<img class="loading" src="{{statusImg}}" *ngIf="!flats" [@fadeInOut]> &lt;!&ndash;spinner&ndash;&gt;-->
+
+      <div class="loader" *ngIf="!flats"></div>
+
+      <div *ngFor="let f of pagedItems">
+
+        <div class=" panel panel-default" style="margin-top: 18px;padding: 0;">
+          <div class="panel-body" style="padding: 0;">
+            <div class="container-fluid">
+              <div class="row content">
+                <div class="col-xs-5 col-md-4" style="padding: 0;" >
+                  <img class="img-responsive" style="margin: 0;padding: 0;height: 220px;cursor: pointer;" src="{{f.flat_img}}" [routerLink]="['/flat-image',f.flat_id]">
+                </div>
+                <div class="col-xs-5 col-md-5" style="height: 220px;">
+                  <h3>{{f.flat_name}}</h3>
+                  <p class="fav"><i class="glyphicon glyphicon-heart"></i></p>
+                  <p><i class="glyphicon glyphicon-map-marker"></i>{{f.flat_location}}</p>
+                  <p><i class="glyphicon glyphicon-piggy-bank"></i>R{{f.flat_price}}</p>
+                  <hr style="margin: 0 0 5px 0;">
+                  <p class="comment">{{f.flat_description}}</p>
+                  <p class="date pull-right"><i class="glyphicon glyphicon-calendar"></i>{{f.flat_date_post}}</p>
+                </div>
+                <div class="col-xs-5 col-md-3"style="height: 220px;">
+                  <p>rating ****</p>
+                  <p style="color: #2196F3;font-size: medium;font-weight: bold;"><img style="height: 30px;width: 40px;margin-right: 10px" src="../assets/img/bed.png">{{f.flat_bedroom}}</p>
+                  <p style="color: #2196F3;font-size: medium;font-weight: bold;"><img style="height: 30px;width: 40px;margin-right: 10px"src="../assets/img/bath.png">{{f.flat_bathroom}}</p>
+                  <p style="color: #2196F3;font-size: medium;font-weight: bold;"><img style="height: 30px;width: 40px;margin-right: 10px" src="../assets/img/parking.png">{{f.flat_parking}}</p>
+                  <button class="btn btn-info btn-block" (click)="showDetails(f.flat_id)" style="width: 90%;border: 0;margin-right: 6px">Details</button>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- pagination -->
+      <ul class="pagination" *ngIf="pager.pages && pager.pages.length">
+        <li [ngClass]="{disabled:pager.currentPage === 1}"><a (click)="setPage(1)" style="cursor: pointer">First</a></li>
+        <li [ngClass]="{disabled:pager.currentPage === 1}"><a (click)="setPage(pager.currentPage - 1)" style="cursor: pointer">Previous</a></li>
+        <li *ngFor="let page of pager.pages"  [ngClass]="{active:pager.currentPage === page}"><a (click)="setPage(page)" style="cursor: pointer">{{page}}</a></li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}"><a (click)="setPage(pager.currentPage + 1)" style="cursor: pointer">Next</a></li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}"><a (click)="setPage(pager.totalPages)" style="cursor: pointer">Last</a></li>
+      </ul>
+
+    </div>
+    </div>
+  </div>
+
+

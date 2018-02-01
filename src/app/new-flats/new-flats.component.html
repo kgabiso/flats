@@ -1,0 +1,89 @@
+<div class=" panel panel-default" style="margin-top: 18px;">
+  <div class="panel-heading"><h3><b>Flat\Apartment Entry Form :</b> You can add flat\apartment details  </h3></div>
+  <div class="panel-body">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Flat Name :</label>
+        <div class="col-sm-9">
+          <input class="form-control " type="text" [(ngModel)]="flat_model.name" name="flatName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label"> location :</label>
+        <div class="col-sm-9">
+          <input class="form-control " type="text" [(ngModel)]="flat_model.location" name="flat_model" autocorrect="off" autocapitalize="off" spellcheck="off"  #search>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label"> price :</label>
+        <div class="col-sm-9">
+          <input class="form-control " type="number" [(ngModel)]="flat_model.price" name="flatPrice">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">bedroom'(s) :</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="number" [(ngModel)]="flat_model.bedroom" name="flatPrice">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">bathroom'(s) :</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="number" [(ngModel)]="flat_model.bathroom" name="flatPrice">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">parking :</label>
+        <div class="col-sm-9">
+          <!--<input class="form-control " type="" placeholder="flat name...">-->
+          <select class="form-control" [(ngModel)]="flat_model.parking" name="flatParking">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">description :</label>
+        <div class="col-sm-9">
+          <!--<input class="form-control " type="text">-->
+          <textarea class="form-control" rows="5" id="comment" [(ngModel)]="flat_model.description" name="flatDescription"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Flat image :</label>
+        <div class="col-sm-9">
+          <input class="form-control " type="file" name="selectFile" (change)=" uploadfile($event)" id="selectFile">
+        </div>
+      </div>
+
+      <div class="form-group " style="text-align: center">
+
+        <div class="col-sm-2">
+          <button class="form-control btn-primary " (click)="addFlat()">Submit</button>
+        </div>
+
+        <div class="col-sm-2">
+          <button class="form-control btn-danger " >Cancel</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+
+        <div class="col-sm-12" *ngIf="errorMessage">
+          <label class="form-control" style="border-color: red; text-align: center;font-size: 1.5em;background-color: #F44336;color: white">hello</label>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div class="panel-footer">
+
+</div>
+</div>

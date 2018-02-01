@@ -1,0 +1,38 @@
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-12 sidenav">
+
+      <div class=" panel panel-default" style="margin-top: 18px; min-height: 800px">
+        <div class="panel-heading" style="text-align:center">
+          <h2>Tabbed Image Gallery</h2>
+          <p>Click on the images below:</p>
+        </div>
+        <div class="panel-body">
+          <div *ngIf="!flat_imgs" [@fadeInOut] style=" font-size: x-large;color: #2196F3;text-align: center;margin-top: 18px;" class="alert alert-danger">
+            <img src="../../assets/img/search-problem.png" style="padding-right: 18px;">No images available
+          </div>
+
+          <a [routerLink]="['/flats']" class=".btn-link"> << </a>
+
+          <div class="row" style="text-align:center">
+            <div class="column" *ngFor="let fImg of flat_imgs">
+              <img  src="{{fImg.img_url}}" id="myImg" alt="Nature" style="width:100%;height: 150px;" (click)="myFunction(fImg.img_url)">
+              <h4 id="img_desc">{{fImg.img_desc}}</h4>
+            </div>
+          </div>
+
+
+          <div id="expandedImg" *ngIf="popup_img" [@fadeInOut]>
+            <span class="closebtn" >&times;</span>
+              <img src="{{image}}" style="width:100%;opacity:1.0;position: relative;  box-shadow: rgba(0, 0, 0, .2) 4px 4px 5px;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
